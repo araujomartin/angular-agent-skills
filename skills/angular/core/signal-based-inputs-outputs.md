@@ -5,18 +5,19 @@ description: >
   Trigger: When defining component inputs/outputs, when migrating from decorators, when working with reactive component APIs, when implementing two-way binding.
 metadata:
   version: "1.0.0"
+  author: araujomartin
   angular:
-    minVersion: "17.1.0"
+    minVersion: "17.3.0"
     maxVersion: "21.0.0"
     supportedVersions: ["17", "18", "19", "20", "21"]
 ---
-
 ## Version Support
 
-**Minimum Angular Version:** 17.1.0  
+**Minimum Angular Version:** 17.3.0  
 **Maximum Angular Version:** 21.0.0  
 **Supported Versions:** 17, 18, 19, 20, 21
 
+> **Note:** Signal inputs (`input()`, `output()`, `model()`) were introduced as **developer preview** in v17.3. They became **stable/production-ready** in v19.0.
 ## When to Use
 
 Load this skill when:
@@ -30,7 +31,7 @@ Load this skill when:
 
 ### Pattern 1: Function-Based Inputs
 
-**Supported in:** v17.1+
+**Introduced in:** v17.3 (developer preview) | **Stable since:** v19.0
 
 Use the `input()` and `input.required()` functions instead of the `@Input()` decorator. These create `InputSignal` objects that integrate seamlessly with Angular's reactivity system.
 
@@ -87,7 +88,7 @@ export class UserCardComponent {
 
 ### Pattern 2: Function-Based Outputs
 
-**Supported in:** v17.1+
+**Introduced in:** v17.3 (developer preview) | **Stable since:** v19.0
 
 Use the `output()` function instead of `@Output()` decorator with `EventEmitter`. This creates an `OutputEmitterRef` that provides a cleaner, more type-safe API.
 
@@ -149,9 +150,9 @@ export class UserListComponent {
 
 ### Pattern 3: Two-Way Binding with model()
 
-**Supported in:** v17.1+
+**Introduced in:** v17.3 (developer preview) | **Stable since:** v19.0
 
-Use the `model()` function for two-way binding. It creates both an input and an output (with "Change" suffix) automatically, replacing `[(ngModel)]` pattern.
+Use the `model()` function for two-way binding. It creates both an input and an output (with "Change" suffix) automatically, replacing the `[(value)]` two-way binding pattern with decorators.
 
 ```typescript
 // ✅ GOOD - Model for two-way binding
@@ -218,7 +219,7 @@ export class ParentComponent {
 
 ### Pattern 4: Input Aliases
 
-**Supported in:** v17.1+
+**Introduced in:** v17.3 (developer preview) | **Stable since:** v19.0
 
 Use the `alias` option to provide a different name for the input property in templates while keeping a different name in the component class.
 

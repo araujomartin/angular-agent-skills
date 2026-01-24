@@ -12,6 +12,9 @@ description: >
   Trigger: When working with [Angular feature], when building [type of component/service], when using [Angular API].
 metadata:
   version: "1.0.0"
+  author:
+    - name: Your Name
+      url: https://your-website-or-github
   angular:
     minVersion: "15.0.0"
     maxVersion: "21.0.0"

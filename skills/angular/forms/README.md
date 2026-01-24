@@ -1,6 +1,6 @@
 # Forms Skills
 
-Angular forms skills for building reactive, template-driven, and signal-based forms.
+Angular forms skills for building reactive, and signal-based forms.
 
 ## Available Skills
 
