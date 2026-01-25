@@ -27,33 +27,35 @@ Skills are specialized instruction sets that teach AI assistants how to work wit
 
 | Skill | Description | Versions | Trigger |
 |-------|-------------|----------|---------|
-| [signal-based-inputs-outputs](skills/angular/core/signal-based-inputs-outputs.md) | Signal-based component inputs and outputs | v17.3+ | When trying to communicate between components |
+| [angular-component-inputs](skills/angular-component-inputs/SKILL.md) | Signal-based component inputs and models | v17.3+ | When defining component inputs or two-way binding |
 
 ### Angular Forms
 
 | Skill | Description | Versions | Trigger |
 |-------|-------------|----------|---------|
-| [reactive-forms](skills/angular/forms/README.md) | Reactive Forms patterns | v15+ | When implementing reactive forms |
-| signal-forms | Signal-based Forms | v21+ | When using signal forms *(Coming Soon)* |
+| [angular-forms](skills/angular-forms/SKILL.md) | Reactive Forms patterns | v15+ | When implementing reactive forms *(Coming Soon)* |
+| angular-signal-forms | Signal-based Forms | v21+ | When using signal forms *(Coming Soon)* |
 
 ### Angular Migrations
 
-#### Pattern Migrations
+| Skill | Description | Versions | Trigger |
+|-------|-------------|----------|---------|  
+| angular-standalone-migration | Migrate to Standalone APIs | v15+ | When converting NgModules *(Coming Soon)* |
+| angular-signal-forms-migration | Migrate to Signal Forms | v21+ | When converting forms *(Coming Soon)* |
+| angular-v15-to-v16 | Angular v15 → v16 upgrade | v15→v16 | When upgrading to v16 *(Coming Soon)* |
+
+### State Management
 
 | Skill | Description | Versions | Trigger |
-|-------|-------------|----------|---------|
-| ng-module-to-standalone | Migrate to Standalone APIs | v15+ | When converting NgModules *(Coming Soon)* |
-| reactive-forms-to-signal-forms | Migrate to Signal Forms | v21+ | When converting forms *(Coming Soon)* |
+|-------|-------------|----------|---------|  
+| ngrx-store | NgRx state management | All | When implementing NgRx *(Coming Soon)* |
+| ngrx-effects | NgRx side effects | All | When handling side effects *(Coming Soon)* |
 
-#### Version Upgrades
+### RxJS
 
 | Skill | Description | Versions | Trigger |
-|-------|-------------|----------|---------|
-| v15-to-v16 | Angular v15 → v16 upgrade | v15→v16 | When upgrading to v16 *(Coming Soon)* |
-
-### NgRx
-
-*Coming soon* - Be the first to contribute NgRx state management skills!
+|-------|-------------|----------|---------|  
+| rxjs-operators | RxJS operators and patterns | All | When working with observables *(Coming Soon)* |
 
 ---
 
@@ -64,9 +66,10 @@ Each skill contains:
 1. **Version Support** - Clear indication of which Angular versions are supported
 2. **Trigger Conditions** - When the AI should load this skill
 3. **Critical Patterns** - Specific Angular conventions to follow (labeled by version)
-4. **Code Examples** - Complete, runnable TypeScript/Angular code
-5. **Common Mistakes** - Anti-patterns to avoid
-6. **Migration Paths** - How to upgrade from older patterns
+4. **Quick Reference** - Concise cheat sheet for common tasks
+5. **References Folder** (optional) - Extended examples, common mistakes, and advanced patterns
+
+The main skill file stays concise and focused, with detailed patterns in a separate `references/` folder when needed.
 
 When the AI detects a matching context (e.g., working with Angular forms), it reads the skill file and applies those patterns to its responses.
 
@@ -90,22 +93,35 @@ We welcome community contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for t
 
 ## Skill Structure
 
+Skills are organized in a flat structure with descriptive names:
+
 ```
 skills/
-├── angular/
-│   ├── core/              # Core Angular features
-│   ├── forms/             # Forms patterns
-│   ├── router/            # Router patterns
-│   ├── http/              # HTTP patterns
-│   ├── performance/       # Optimization
-│   ├── testing/           # Testing strategies
-│   └── migrations/        # Migration guides
-│       ├── pattern-migrations/    # Feature-to-feature
-│       └── version-upgrades/      # Version-to-version
-├── ngrx/                  # NgRx state management
-├── rxjs/                  # RxJS patterns
-└── skill-creator/         # How to create skills
+├── angular-component-inputs/     # Signal-based inputs and models
+├── angular-forms/                # Reactive Forms patterns
+├── angular-signal-forms/         # Signal-based Forms (v21+)
+├── angular-router/               # Router patterns and guards
+├── angular-http/                 # HttpClient patterns
+├── angular-standalone/           # Standalone components migration
+├── ngrx-store/                   # NgRx state management
+├── rxjs-operators/               # RxJS patterns
+└── skill-creator/                # How to create skills
 ```
+
+### Individual Skill Structure
+
+Each skill follows this pattern:
+
+```
+skill-name/
+├── SKILL.md              # Main skill file (concise, critical patterns)
+└── references/           # Optional: Extended patterns and examples
+    └── patterns.md       # Real-world examples, common mistakes, advanced patterns
+```
+
+The main `SKILL.md` should be concise and focus on critical patterns. Extended examples, common mistakes, and advanced patterns should be moved to the `references/` folder to keep the skill focused and easy to scan.
+
+**Naming Convention:** Use `angular-feature` format for core Angular skills (e.g., `angular-forms`, `angular-router`). For libraries, use `library-feature` format (e.g., `ngrx-store`, `rxjs-operators`).
 
 ---
 

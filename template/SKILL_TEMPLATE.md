@@ -95,59 +95,7 @@ export class ExampleComponent {
 }
 ```
 
-## Real-World Examples
-
-### Example 1: [Use Case]
-
-**Context:** [When/where to use this]
-
-```typescript
-// Complete working example
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-example',
-  standalone: true,
-  template: `
-    <div>
-      <!-- Your template -->
-    </div>
-  `
-})
-export class ExampleComponent {
-  // Implementation
-}
-```
-
-### Example 2: [Use Case]
-
-**Context:** [When/where to use this]
-
-```typescript
-// Another complete example
-```
-
-## Common Mistakes
-
-### ❌ Don't: [Anti-pattern name]
-
-**Why this is problematic:** [Explanation]
-
-```typescript
-// ❌ BAD - Don't do this
-export class BadComponent {
-  // What NOT to do
-}
-```
-
-**✅ Instead, do this:**
-
-```typescript
-// ✅ GOOD - Correct approach
-export class GoodComponent {
-  // Correct implementation
-}
-```
+For detailed examples, common mistakes, and advanced patterns, see [references/patterns.md](references/patterns.md).
 
 ## Quick Reference
 
@@ -166,6 +114,26 @@ export class GoodComponent {
 
 ---
 
+## References Folder Structure
+
+Extensive examples and patterns should be moved to a `references/` folder within your skill directory:
+
+```
+your-skill-name/
+├── SKILL.md              # Main skill file (concise)
+└── references/
+    └── patterns.md       # Extended examples, common mistakes, advanced patterns
+```
+
+The `references/patterns.md` file should contain:
+- **Real-World Examples**: Complete, production-ready code examples
+- **Common Mistakes**: Anti-patterns with corrections
+- **Advanced Patterns**: Complex use cases and edge cases
+
+Keep the main SKILL.md focused on critical patterns and quick reference, with a link to references for deeper exploration.
+
+---
+
 ## Validation Checklist
 
 Before submitting, ensure your skill meets these requirements:
@@ -180,8 +148,7 @@ Before submitting, ensure your skill meets these requirements:
 - [ ] `## Version Support` - Shows supported Angular versions
 - [ ] `## When to Use` - Clear triggers for when to apply this skill
 - [ ] `## Critical Patterns` - Core patterns with version labels
-- [ ] `## Real-World Examples` - Complete, runnable code examples
-- [ ] `## Common Mistakes` - Anti-patterns with corrections
+- [ ] Link to `references/` folder for extended examples (if applicable)
 
 ### Code Quality
 - [ ] Examples are complete and can run standalone

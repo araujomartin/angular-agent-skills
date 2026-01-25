@@ -19,7 +19,7 @@
 
 | Skill | Description | Path | Versions |
 |-------|-------------|------|----------|
-| `signal-based-inputs-outputs` | Signal-based component inputs and outputs | [signal-based-inputs-outputs.md](skills/angular/core/signal-based-inputs-outputs.md) | v17.1+ |
+| `angular-component-inputs` | Signal-based component inputs and models | [SKILL.md](skills/angular-component-inputs/SKILL.md) | v17.3+ |
 
 ### Angular Forms
 
@@ -58,7 +58,7 @@ When performing these actions, AI agents should ALWAYS load the corresponding sk
 | Action | Skill to Load |
 |--------|---------------|
 | Creating a new skill or updating skill documentation | `skill-creator` |
-| Working with signal-based inputs or outputs | `signal-based-inputs-outputs` |
+| Working with signal-based inputs or models | `angular-component-inputs` |
 | Implementing reactive forms | `reactive-forms` |
 | Migrating from NgModule to Standalone | `ng-module-to-standalone` |
 | Migrating between Angular versions | Appropriate `v{x}-to-v{y}` skill |
