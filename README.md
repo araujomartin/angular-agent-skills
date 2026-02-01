@@ -23,11 +23,17 @@ Skills are specialized instruction sets that teach AI assistants how to work wit
 |-------|-------------|---------|
 | [skill-creator](skills/skill-creator/SKILL.md) | Create new Angular AI agent skills | When creating new skills or documenting Angular patterns |
 
-### Angular Core
+
+### Angular Component Authoring
+
+These skills are recommended to be used together when creating or maintaining Angular components. They ensure your components follow modern best practices for API design, state management, and access control.
 
 | Skill | Description | Versions | Trigger |
 |-------|-------------|----------|---------|
 | [angular-component-inputs](skills/angular-component-inputs/SKILL.md) | Signal-based component inputs and models | v17.3+ | When defining component inputs or two-way binding |
+| [angular-access-modifiers](skills/angular-access-modifiers/SKILL.md) | Proper use of access modifiers for component API, template state, and internal logic | v15+ | When defining component properties or API surface |
+
+---
 
 ### Angular Forms
 
